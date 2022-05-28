@@ -1,0 +1,179 @@
+@font-face{
+    font-family: Afrah;
+    src: url("./fonts/Afrah-Regular.otf") format("opentype");
+    src: url("./fonts/Afrah-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Amsterdam two";
+    src: url("./fonts/Amsterdam.ttf") format("truetype");
+}
+
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --pink: #fec7d7;
+    --darkblue: #0e172c;
+    --direction-arrow-color: #fffffe;
+    --event-bg-color: #d9d4e7;
+    --light-grey: #d9d4e7;
+    --font-size: 1.3rem;
+    --serif: Afrah, "Oxygen mono", monospace, serif;
+    --sans: "Amsterdam two", Oxygen, sans-serif;
+/* 
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa; */
+    /* --mono: "Oxygen mono", monospace; */
+    /* --sans: Oxygen, sans-serif; */
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* generic styles for the page */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--serif);
+    background-color: var(--pink);
+    color: var(--darkblue);
+    font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: var(--sans);
+    /* font-size: var(--font-size); */
+}
+a {
+    color: var(--darkblue);
+}
+
+a:hover {
+    color: var(--event-bg-color);
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    /* background-color: red; */
+    background-color: var(--pink);
+}
+
+header ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+    /* width: 80vw; */
+}
+
+.link_name {
+    display: none;
+}
+
+/* MAIN */
+
+main {
+    /* background-color: var(--light-grey); */
+}
+
+.banner figure {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.banner figure img {
+    border-radius: 50%;
+}
+
+.banner h2 {
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 5rem;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner blockquote {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0 0 5vh 0;
+}
+
+.banner p {
+    margin: 0 10vw;
+}
+
+.row.even {
+    background-color: var(--light-grey);    
+}
+
+.row div.events_container{
+    width: 80vw;
+    margin-left: 10vw;
+
+
+    margin-top: 5vh;
+    border-top: solid 5px var(--darkblue);
+    border-right: solid 5px var(--darkblue);
+    border-bottom: solid 5px var(--darkblue);
+
+    display: flex;
+    font-size: 0.9rem;
+}
+
+.an_event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row .an_event object {
+    width: 20vw;
+    height: 20vw;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      vw;
+}
+
+
+@media screen and (min-width: 768px) {
+    /* HEADER */
+
+    header object {
+        display: none;
+    }
+    .link_name {
+        /* display: nne; */
+        display: contents;
+    }
+
+    /* MAIN */
+    .banner figure {
+        justify-content: flex-end;
+    }
+
+    .banner figure img {
+        border-radius: 0;
+    }
+
+}
+
+/* FOOTER */
